@@ -204,12 +204,6 @@
 # ddg: DuckDuckGo 
 ^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
 
-# es：Ecosia搜索
-^https:\/\/duckduckgo.com\/\?q=es\+([^&]+).+ https://www.ecosia.org/search?q=$1 302
-
-# wz：无追搜索
-^https:\/\/duckduckgo.com\/\?q=wz\+([^&]+).+ https://www.wuzhuiso.com/s?q=$1 302
-
 # gs: genspark 
 ^https:\/\/duckduckgo.com\/\?q=gs\+([^&]+).+ https://www.genspark.ai/search?query=$1 302
 
