@@ -1,0 +1,171 @@
+name: "🔍Search-All-In-One"
+desc: |-
+  Safari 内输入 命令 + 空格 + 关键词 
+  快速指定搜索引擎搜索，先进入系统设置
+  更改 Safari 默认搜索为 DuckDuckGO
+openUrl: ""
+author: "Betterman"
+homepage: "https://github.com/betterman-xyz/scripts"
+manual: "https://github.com/betterman-xyz/scripts"
+icon: "https://raw.githubusercontent.com/betterman-xyz/scripts/main/Icon/Image/Safari.png"
+category: "Better Scripts"
+
+http:
+  # HTTP(S) 重写，支持header、302、307、reject多种策略
+  mitm:
+    - "duckduckgo.com"
+  url-rewrite:
+#   - ^https?://www\.google\.cn https://www.google.com 302 # 直接返回一个 302 重定向的响应
+    
+############＞＞＞ 搜索 ＞＞＞############
+
+# gm   (Google图片)
+    - ^https?:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+
+# gh   (GitHub)
+    - ^https?:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+
+# sof  (Stack Overflow)
+    - ^https?:\/\/duckduckgo.com\/\?q=sof\+([^&]+).+ https://stackoverflow.com/search?q=$1 302
+
+# se  (StackExchange)
+    - ^https?:\/\/duckduckgo.com\/\?q=se\+([^&]+).+ https://stackexchange.com/search?q=$1 302
+
+# wa  (WolframAlpha)
+    - ^https?:\/\/duckduckgo.com\/\?q=wa\+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
+
+# wiki  (维基百科)
+    - ^https?:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$2 302
+
+# wk  (维基中文)
+    - ^https?:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
+
+# mg  (Magi)
+    - ^https?:\/\/duckduckgo.com\/\?q=mg(\+|%20)([^&]+).+ https://magi.com/search?q=$2 302
+
+# tf  (Google 搜索 TestFlight)
+    - ^https?:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+
+# yh  (greasy fork) 油猴脚本
+    - ^https?:\/\/duckduckgo.com\/\?q=yh\+([^&]+).+ https://greasyfork.org/zh-CN/scripts?q=$1 302
+
+############＞＞＞ 翻译 ＞＞＞############
+
+# yd   (有道)
+    - ^https?:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+
+# fy  (Google 译至英)  取翻译的首字母fy
+    - ^https?:\/\/duckduckgo.com\/\?q=fy\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
+
+# trc  (Google 译至中)
+    - ^https?:\/\/duckduckgo.com\/\?q=trc\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
+
+# trj  (Google 译至日)
+    - ^https?:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
+
+#############＞＞＞ 社区 ＞＞＞############
+
+# tt：头条
+    - ^https?:\/\/duckduckgo.com\/\?q=tt\+([^&]+).+ https://so.toutiao.com/search?keyword=$1 302
+
+# dy：豆瓣
+    - ^https?:\/\/duckduckgo.com\/\?q=dy\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+
+# cf: 茶杯狐cupfox
+    - ^https?:\/\/duckduckgo.com\/\?q=cf\+([^&]+).+ https://cupfox.app/search?key=$1 302
+
+# zh: 知乎
+    - ^https?:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+
+# wb: 微博
+    - ^https?:\/\/duckduckgo.com\/\?q=wb\+([^&]+).+ https://s.weibo.com/weibo/$1 302
+
+# wx: 微信
+    - ^https?:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+
+# rd: Reddit
+    - ^https?:\/\/duckduckgo.com\/\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$1 302
+
+# tw: Twitter
+    - ^https?:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
+
+# ssp: 少数派
+    - ^https?:\/\/duckduckgo.com\/\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$1 302
+
+# csdn: CSDN
+    - ^https?:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
+
+############＞＞＞ 购物 ＞＞＞############
+
+# zdm: 什么值得买
+    - ^https?:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
+
+# amz: 亚马逊
+    - ^https?:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
+
+# jd: 京东
+    - ^https?:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+
+# tb: 淘宝
+    - ^https?:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+
+# tm: 天猫
+    - ^https?:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+
+############＞＞＞ 视频资源 ＞＞＞############
+
+# TMDB
+    - ^https?:\/\/duckduckgo.com\/\?q=tmdb\+([^&]+).+ https://www.themoviedb.org/search?query=$1 302
+
+# ac  Acfun
+    - ^https?:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword=$1 302
+
+# bl  哔哩哔哩
+    - ^https?:\/\/duckduckgo.com\/\?q=bl\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+
+# tx  腾讯视频
+    - ^https?:\/\/duckduckgo.com\/\?q=tx\+([^&]+).+ https://v.qq.com/x/search/search?q=$1 302
+
+# yk  优酷
+    - ^https?:\/\/duckduckgo.com\/\?q=yk\+([^&]+).+ https://so.youku.com/search_video/q_$1 302
+
+# aqy  爱奇艺
+    - ^https?:\/\/duckduckgo.com\/\?q=aqy\+([^&]+).+ https://so.iqiyi.com/so/q_$1 302
+
+# ytb  YouTube
+    - ^https?:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+
+# ph  PornHub
+    - ^https?:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+
+# db  javdb
+    - ^https?:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://javdb.com/search?q=$1 302
+
+# bus  javbus
+    - ^https?:\/\/duckduckgo.com\/\?q=bus\+([^&]+).+ https://www.javbus.com/search/$1 302
+
+############＞＞＞ 网盘 ＞＞＞############
+
+# gd  Google Drive
+    - ^https?:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
+
+
+############＞＞＞ 搜索引擎 ＞＞＞############
+
+# by: 必应
+    - ^https?:\/\/duckduckgo.com\/\?q=by\+([^&]+).+ https://cn.bing.com/search?q=$1 302
+
+# bd: 百度
+    - ^https?:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
+# ddg: DuckDuckGo 
+    - ^https?:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
+
+# gs: genspark 
+    - ^https?:\/\/duckduckgo.com\/\?q=gs\+([^&]+).+ https://www.genspark.ai/search?query=$1 302
+
+# mt: 秘塔ai搜索 
+    - ^https?:\/\/duckduckgo.com\/\?q=mt\+([^&]+).+ https://metaso.cn/?q=$1 302
+
+# 无指令: 谷歌
+    - ^https?:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302

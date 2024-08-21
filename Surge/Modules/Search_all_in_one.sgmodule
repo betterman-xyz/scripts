@@ -3,7 +3,7 @@
 #!author=Betterman[https://github.com/betterman-xyz]
 #!homepage=https://github.com/betterman-xyz/scripts/blob/main/README.md
 #!icon=https://raw.githubusercontent.com/betterman-xyz/scripts/main/Icon/Image/Safari.png
-#!system=ios
+# 示例：safari 或桌面下拉输入：zh 黑神话  然后回车即可跳转知乎搜索黑神话的页面 
 # 可自行修改指令或者添加搜索引擎
 
 # gh：  GitHub搜索
@@ -16,9 +16,9 @@
 # tf:   Google 搜索 TestFlight
 # yh  (greasy fork) 搜索油猴脚本
 
-# yd：有道词典搜索
+# yd： 有道词典搜索
+# fy:  Google 译至英
 # trc: Google 译至中
-# tre: Google 译至英
 # trj: Google 译至日
 
 # tt：头条
@@ -29,39 +29,39 @@
 # wx: 微信
 # tw：Twitter
 # rd: Reddit
-# ssp: 少数派
+# ssp:  少数派
 # csdn: CSDN
 
 # zdm: 什么值得买
 # amz: 亚马逊
-# jd: 京东
-# tb: 淘宝
-# tm: 天猫
+# jd:  京东
+# tb:  淘宝
+# tm:  天猫
 
 # tmdb：TMDB
-# ac:  Acfun
-# bl: 哔哩哔哩
-# ytb: YouTube
-# ph:  PornHub 
-# tx (腾讯视频) 
-# aqy (爱奇艺) 
-# yk (优酷) 
-# db (javdb) 
-# bus (javbus) 
+# ac:   Acfun
+# bl:   哔哩哔哩
+# ph:   PornHub 
+# tx：  腾讯视频
+# yk：  优酷
+# aqy： 爱奇艺
+# ytb:  YouTube
+# db：  javdb
+# bus： javbus
 
 # gd:  Google Drive资源
 
-# bi: 必应
-# bd：百度搜索
+# bi:  必应
+# bd： 百度搜索
 # ddg：DuckDuckGo 搜索
-# gs: genspark
-# mt: 秘塔ai搜索 
+# gs:  genspark
+# mt:  秘塔ai搜索 
 # 无指令则转 Google 搜索
 
 [URL Rewrite]
-# ＞搜索
+############＞＞＞ 搜索 ＞＞＞############
 
-#gm   (Google图片)
+# gm   (Google图片)
 ^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
 
 # gh   (GitHub)
@@ -91,7 +91,7 @@
 # yh  (greasy fork) 油猴脚本
 ^https:\/\/duckduckgo.com\/\?q=yh\+([^&]+).+ https://greasyfork.org/zh-CN/scripts?q=$1 302
 
-# > 翻译
+############＞＞＞ 翻译 ＞＞＞############
 
 # yd   (有道)
 ^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
@@ -105,7 +105,7 @@
 # trj  (Google 译至日)
 ^https:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
 
-# ＞社区
+#############＞＞＞ 社区 ＞＞＞############
 
 # tt：头条
 ^https:\/\/duckduckgo.com\/\?q=tt\+([^&]+).+ https://so.toutiao.com/search?keyword=$1 302
@@ -113,7 +113,7 @@
 # dy：豆瓣
 ^https:\/\/duckduckgo.com\/\?q=dy\+([^&]+).+ https://m.douban.com/search/?query=$1 302
 
-# cf  茶杯狐cupfox
+# cf: 茶杯狐cupfox
 ^https:\/\/duckduckgo.com\/\?q=cf\+([^&]+).+ https://cupfox.app/search?key=$1 302
 
 # zh: 知乎
@@ -125,10 +125,10 @@
 # wx: 微信
 ^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
 
-# rd  (Reddit)
+# rd: Reddit
 ^https:\/\/duckduckgo.com\/\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$1 302
 
-# tw (Twitter)
+# tw: Twitter
 ^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
 
 # ssp: 少数派
@@ -137,7 +137,7 @@
 # csdn: CSDN
 ^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
 
-# > 购物
+############＞＞＞ 购物 ＞＞＞############
 
 # zdm: 什么值得买
 ^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
@@ -145,7 +145,7 @@
 # amz: 亚马逊
 ^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
 
-# jd : 京东
+# jd: 京东
 ^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
 
 # tb: 淘宝
@@ -154,46 +154,45 @@
 # tm: 天猫
 ^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
 
-# ＞视频资源
+############＞＞＞ 视频资源 ＞＞＞############
 
 # TMDB
 ^https:\/\/duckduckgo.com\/\?q=tmdb\+([^&]+).+ https://www.themoviedb.org/search?query=$1 302
 
-# ac (Acfun)
+# ac  Acfun
 ^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword=$1 302
 
-# bl (哔哩哔哩)
+# bl  哔哩哔哩
 ^https:\/\/duckduckgo.com\/\?q=bl\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
 
-# tx (腾讯视频) 
+# tx  腾讯视频
 ^https:\/\/duckduckgo.com\/\?q=tx\+([^&]+).+ https://v.qq.com/x/search/search?q=$1 302
 
-# yk (优酷) 
+# yk  优酷
 ^https:\/\/duckduckgo.com\/\?q=yk\+([^&]+).+ https://so.youku.com/search_video/q_$1 302
 
-# aqy (爱奇艺) 
+# aqy  爱奇艺
 ^https:\/\/duckduckgo.com\/\?q=aqy\+([^&]+).+ https://so.iqiyi.com/so/q_$1 302
 
-# db (javdb) 
-^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://javdb.com/search?q=$1 302
-
-# bus (javbus) 
-^https:\/\/duckduckgo.com\/\?q=bus\+([^&]+).+ https://www.javbus.com/search/$1 302
-
-# ytb  (YouTube)
+# ytb  YouTube
 ^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
 
-# ph  (PornHub) 
+# ph  PornHub
 ^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
 
+# db  javdb
+^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://javdb.com/search?q=$1 302
 
-# ＞网盘
+# bus  javbus
+^https:\/\/duckduckgo.com\/\?q=bus\+([^&]+).+ https://www.javbus.com/search/$1 302
 
-# gd  (Google Drive)
+############＞＞＞ 网盘 ＞＞＞############
+
+# gd  Google Drive
 ^https:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
 
 
-# ＞搜索引擎
+############＞＞＞ 搜索引擎 ＞＞＞############
 
 # by: 必应
 ^https:\/\/duckduckgo.com\/\?q=by\+([^&]+).+ https://cn.bing.com/search?q=$1 302
