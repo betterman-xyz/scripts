@@ -212,23 +212,26 @@
 # gs: genspark 
 ^https:\/\/duckduckgo.com\/\?q=gs\+([^&]+).+ https://www.genspark.ai/search?query=$1 302
 
-# mt: 秘塔ai搜索 
+# mt: 秘塔 AI搜索 
 ^https:\/\/duckduckgo.com\/\?q=mt\+([^&]+).+ https://metaso.cn/?q=$1 302
 
-# pp: perplexity ai搜索 
+# pp: perplexity AI搜索 
 ^https:\/\/duckduckgo.com\/\?q=pp\+([^&]+).+ https://www.perplexity.ai/?q=$1 302
 
-# you: you.com ai搜索 
+# you: you.com AI搜索 
 ^https:\/\/duckduckgo.com\/\?q=you\+([^&]+).+ https://www.you.com/search?q=$1 302
 
-# 360：360 ai搜索
+# 360：360 AI搜索
 ^https:\/\/duckduckgo.com\/\?q=360\+([^&]+).+ https://so.360.com/search?q=$1 302
 
-# tg：天工 ai搜索
+# tg：天工 AI搜索
 ^https:\/\/duckduckgo.com\/\?q=tg\+([^&]+).+ https://www.tiangong.cn/result/?q=$1 302
 
+# ask：iAsk AI搜索
+^https:\/\/duckduckgo.com\/\?q=ask\+([^&]+).+ https://iask.ai/search?q=$1 302
+
 # gpt：chatgpt 搜索
-^https:\/\/duckduckgo.com\/\?q=gpt\+([^&]+).+ chatgpt://query?q=$1 302
+# ^https:\/\/duckduckgo.com\/\?q=gpt\+([^&]+).+ chatgpt://query?q=$1 302
 
 # 无指令: 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
