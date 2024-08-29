@@ -228,7 +228,7 @@
 ^https:\/\/duckduckgo.com\/\?q=tg\+([^&]+).+ https://www.tiangong.cn/result/?q=$1 302
 
 # gpt：chatgpt 搜索
-^https:\/\/duckduckgo.com\/\?q=gpt\+([^&]+).+ gpt://query?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=gpt\+([^&]+).+ chatgpt://query?q=$1 302
 
 # 无指令: 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
