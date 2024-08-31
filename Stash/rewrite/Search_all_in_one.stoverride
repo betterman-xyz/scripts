@@ -3,6 +3,8 @@ desc: |-
   Safari 内输入 命令 + 空格 + 关键词 
   快速指定搜索引擎搜索，先进入系统设置
   更改 Safari 默认搜索为 DuckDuckGO
+  示例：safari 或桌面下拉输入：zh 黑神话
+  然后回车即可跳转知乎搜索黑神话的页面
 openUrl: ""
 author: "Betterman"
 homepage: "https://github.com/betterman-xyz/scripts"
@@ -161,11 +163,32 @@ http:
 # ddg: DuckDuckGo 
     - ^https?:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
 
-# gs: genspark 
-    - ^https?:\/\/duckduckgo.com\/\?q=gs\+([^&]+).+ https://www.genspark.ai/search?query=$1 302
+# ec: ecosia
+    - ^https:\/\/duckduckgo.com\/\?q=ec\+([^&]+).+ https://www.ecosia.org/search?q=$1 302
 
-# mt: 秘塔ai搜索 
-    - ^https?:\/\/duckduckgo.com\/\?q=mt\+([^&]+).+ https://metaso.cn/?q=$1 302
+# kg: kagi(需要登录)
+    - ^https:\/\/duckduckgo.com\/\?q=kg\+([^&]+).+ https://kagi.com/search?q=$1 302
+
+# gs: genspark 
+    - ^https:\/\/duckduckgo.com\/\?q=gs\+([^&]+).+ https://www.genspark.ai/search?query=$1 302
+
+# mt: 秘塔 AI搜索 
+    - ^https:\/\/duckduckgo.com\/\?q=mt\+([^&]+).+ https://metaso.cn/?q=$1 302
+
+# pp: perplexity AI搜索 
+    - ^https:\/\/duckduckgo.com\/\?q=pp\+([^&]+).+ https://www.perplexity.ai/?q=$1 302
+
+# you: you.com AI搜索 
+    - ^https:\/\/duckduckgo.com\/\?q=you\+([^&]+).+ https://www.you.com/search?q=$1 302
+
+# 360：360 AI搜索
+    - ^https:\/\/duckduckgo.com\/\?q=360\+([^&]+).+ https://so.360.com/search?q=$1 302
+
+# tg：天工 AI搜索
+    - ^https:\/\/duckduckgo.com\/\?q=tg\+([^&]+).+ https://www.tiangong.cn/result/?q=$1 302
+
+# ask：iAsk AI搜索
+    - ^https:\/\/duckduckgo.com\/\?q=ask\+([^&]+).+ https://iask.ai/search?q=$1 302
 
 # 无指令: 谷歌
     - ^https?:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302

@@ -54,8 +54,15 @@
 # bi:  必应
 # bd： 百度搜索
 # ddg：DuckDuckGo 搜索
-# gs:  genspark
-# mt:  秘塔ai搜索 
+# ec: ecosia
+# kg: kagi(需要登录)
+# gs: genspark 
+# mt: 秘塔 AI搜索 
+# pp: perplexity AI搜索 
+# you: you.com AI搜索 
+# 360：360 AI搜索
+# tg：天工 AI搜索
+# ask：iAsk AI搜索
 # 无指令则转 Google 搜索
 
 [URL Rewrite]
